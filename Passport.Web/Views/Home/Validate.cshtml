@@ -1,0 +1,60 @@
+﻿@model Passport.Web.Models.ValidationModel
+
+@{
+    ViewBag.Title = "Passport Validation Result";
+}
+
+<h2>Validation Result</h2>
+
+<div style="min-width:500px">
+    <hr />
+    <div class="divTable">
+        <div class="divTableRow">
+            <div class="divTableCell"><b>Validation Type</b></div>
+            <div class="divTableCell"><b>Result</b></div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidPassportNumber)</div>
+            <div class="divTableCell">@(Model.IsValidPassportNumber ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidDateofBirthDigit)</div>
+            <div class="divTableCell">@(Model.IsValidDateofBirthDigit ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidPassportExpiredDate)</div>
+            <div class="divTableCell">@(Model.IsValidPassportExpiredDate ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidPersonalNumber)</div>
+            <div class="divTableCell">@(Model.IsValidPersonalNumber ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidFinalCheck)</div>
+            <div class="divTableCell">@(Model.IsValidFinalCheck ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidGender)</div>
+            <div class="divTableCell">@(Model.IsValidGender ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidDateofBirthCrossCheck)</div>
+            <div class="divTableCell">@(Model.IsValidDateofBirthCrossCheck ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidPassportExpiredCrossCheck)</div>
+            <div class="divTableCell">@(Model.IsValidPassportExpiredCrossCheck ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidNationalityCode)</div>
+            <div class="divTableCell">@(Model.IsValidNationalityCode ? "Passed" : "Failed")</div>
+        </div>
+        <div class="divTableRow">
+            <div class="divTableCell">@Html.DisplayNameFor(model => model.IsValidPassportNumberCrossCheck)</div>
+            <div class="divTableCell">@(Model.IsValidPassportNumberCrossCheck ? "Passed" : "Failed")</div>
+        </div>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Back", "Index")
+</p>
